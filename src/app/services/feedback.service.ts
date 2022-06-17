@@ -15,6 +15,7 @@ export class FeedbackService {
   ) { }
 
   private feedbackUrl = 'https://localhost:5001/api/Review';
+  private feedbackNumbersUrl = 'https://localhost:5001/api/Review/statistics';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
@@ -24,6 +25,14 @@ export class FeedbackService {
     return this.http.get<FeedbackTableItem[]>(this.feedbackUrl)
       .pipe(
         catchError(this.handleError<FeedbackTableItem[]>('getFeedbacks', []))
+      );
+  }
+
+  /* Get number of feedbacks in different status */
+  getNumberOfFeedbacksByStatus(): Observable<any[]> {
+    return this.http.get<any[]>(this.feedbackNumbersUrl)
+      .pipe(
+        catchError(this.handleError<any[]>('getNumberOfFeedbacksByStatus', []))
       );
   }
 

@@ -24,7 +24,7 @@ export class FeedbackTableComponent implements AfterViewInit {
   }
 
   ngOnInit(): void {
-
+    console.log(this.dataSource);
   }
 
   ngAfterViewInit(): void {
