@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,11 +8,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
 
-import {MatButtonModule} from "@angular/material/button";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
-import {MatSidenavModule} from "@angular/material/sidenav";
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavComponent } from './nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
@@ -21,13 +21,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { FeedbackPieComponent } from './feedback-chart/charts/feedback-pie/feedback-pie.component';
-import {NgChartsModule} from "ng2-charts";
+import { NgChartsModule } from 'ng2-charts';
 import { FeedbackTableComponent } from './feedback-table/feedback-table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
-
+import { FeedbackBarComponent } from './feedback-chart/charts/feedback-bar/feedback-bar.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +35,7 @@ import { MatSortModule } from '@angular/material/sort';
     FeedbackChartComponent,
     FeedbackPieComponent,
     FeedbackTableComponent,
+    FeedbackBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,13 +55,10 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-
-export class AppModule {
-}
+export class AppModule {}

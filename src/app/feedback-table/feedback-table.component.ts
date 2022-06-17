@@ -2,13 +2,16 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { FeedbackTableDataSource, FeedbackTableItem } from './feedback-table-datasource';
-import {FeedbackService} from "../services/feedback.service";
+import {
+  FeedbackTableDataSource,
+  FeedbackTableItem,
+} from './feedback-table-datasource';
+import { FeedbackService } from '../services/feedback.service';
 
 @Component({
   selector: 'app-feedback-table',
   templateUrl: './feedback-table.component.html',
-  styleUrls: ['./feedback-table.component.css']
+  styleUrls: ['./feedback-table.component.css'],
 })
 export class FeedbackTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
