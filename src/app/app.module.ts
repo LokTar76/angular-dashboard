@@ -22,11 +22,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { FeedbackPieComponent } from './feedback-chart/charts/feedback-pie/feedback-pie.component';
 import { NgChartsModule } from 'ng2-charts';
-import { FeedbackTableComponent } from './feedback-table/feedback-table.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { FeedbackBarComponent } from './feedback-chart/charts/feedback-bar/feedback-bar.component';
+import { FeedbackTaskComponent } from './feedback-task/feedback-task.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +36,8 @@ import { FeedbackBarComponent } from './feedback-chart/charts/feedback-bar/feedb
     NavComponent,
     FeedbackChartComponent,
     FeedbackPieComponent,
-    FeedbackTableComponent,
     FeedbackBarComponent,
+    FeedbackTaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,8 @@ import { FeedbackBarComponent } from './feedback-chart/charts/feedback-bar/feedb
     MatPaginatorModule,
     MatSortModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
 
   providers: [],

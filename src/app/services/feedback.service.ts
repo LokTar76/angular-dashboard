@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import {FeedbackTableItem} from "../feedback-table/feedback-table-datasource";
 
 @Injectable({
   providedIn: 'root'
@@ -20,11 +19,11 @@ export class FeedbackService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
-  /* Get feedback records from the server */
-  getFeedbacks(): Observable<FeedbackTableItem[]> {
-    return this.http.get<FeedbackTableItem[]>(this.feedbackUrl)
+  /* Get all feedback tasks */
+  getFeedbackTasks(): Observable<any[]> {
+    return this.http.get<any[]>(this.feedbackUrl)
       .pipe(
-        catchError(this.handleError<FeedbackTableItem[]>('getFeedbacks', []))
+        catchError(this.handleError<any[]>('getFeedbackTasks', []))
       );
   }
 
