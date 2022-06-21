@@ -12,7 +12,7 @@ import { FeedbackService } from '../services/feedback.service';
   styleUrls: ['./feedback-task.component.css'],
 })
 export class FeedbackTaskComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'created', 'processed', 'status']; // Displayed columns
+  displayedColumns: string[] = ['id', 'name', 'created', 'processed', 'status', 'actions']; // Displayed columns
   dataSource!: MatTableDataSource<Feedback>;
   feedbackTasks!: Feedback[];
 

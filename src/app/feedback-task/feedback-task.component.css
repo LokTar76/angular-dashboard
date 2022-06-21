@@ -13,4 +13,6 @@ table {
   width: 50%;
 }
 
-
+.action-button {
+  margin-right: 10px;
+}
